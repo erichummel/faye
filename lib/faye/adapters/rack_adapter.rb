@@ -56,7 +56,8 @@ module Faye
           s.ssl = true
           s.ssl_options = {
             :private_key_file => ssl_options[:key],
-            :cert_chain_file  => ssl_options[:cert]
+            :cert_chain_file  => ssl_options[:cert],
+            :verify_peer => ssl_options[:verify]
           }
         end
         @thin_server = s
